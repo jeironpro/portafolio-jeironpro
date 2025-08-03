@@ -1,0 +1,114 @@
+body {
+    height: 100%;
+}
+
+.contenedor-principal-habilidades {
+    margin: 10px;
+}
+
+.contenedor-principal-habilidades .titulo {
+    border-radius: 5px;
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 8px;
+}
+
+.contenedor-principal-habilidades .contenedor-habilidades {
+    box-sizing: border-box;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    width: 100%;
+}
+
+.contenedor-principal-habilidades .contenedor-habilidades .habilidad {
+    align-items: center;
+    background-color: #F1F1F1;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 320px;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.contenedor-principal-habilidades .contenedor-habilidades .habilidad h3 {
+    align-items: center;
+    display: flex;
+    font-size: 22px;
+    height: 24px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.contenedor-principal-habilidades .contenedor-habilidades .habilidad p {
+    font-size: 18px;
+}
+
+/* Tablets y móviles grandes (pantallas medianas) */
+@media (max-width: 991px) {
+    .contenedor-principal-habilidades .contenedor-habilidades {
+        grid-template-columns: 1fr;
+        /* una sola columna */
+        padding: 15px;
+    }
+
+    .contenedor-principal-habilidades .titulo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin: 15px;
+        padding: 6px;
+    }
+
+    .contenedor-principal-habilidades .contenedor-habilidades .habilidad {
+        height: auto;
+        padding: 16px;
+    }
+
+    .contenedor-principal-habilidades .contenedor-habilidades .habilidad h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .contenedor-principal-habilidades .contenedor-habilidades .habilidad p {
+        font-size: 16px;
+    }
+}
+
+/* Móviles pequeños y estándar */
+@media (max-width: 600px) {
+    .contenedor-principal-habilidades {
+        margin: 5px;
+    }
+
+    .contenedor-principal-habilidades .titulo {
+        font-size: 1rem;
+        margin: 10px;
+        padding: 4px;
+    }
+
+    .contenedor-principal-habilidades .contenedor-habilidades {
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .contenedor-principal-habilidades .contenedor-habilidades .habilidad {
+        gap: 12px;
+        padding: 14px;
+    }
+
+    .contenedor-principal-habilidades .contenedor-habilidades .habilidad h3 {
+        font-size: 18px;
+    }
+
+    .contenedor-principal-habilidades .contenedor-habilidades .habilidad p {
+        font-size: 15px;
+    }
+}
