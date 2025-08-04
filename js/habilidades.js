@@ -19,7 +19,7 @@ habilidades.forEach(hab => {
         <div class="titulo-imagen">
             <h3>${hab.titulo}</h3>
             <figure>
-                <img src="icons/${hab.titulo.toLowerCase()}.png" alt="Logo de ${hab.titulo}">
+                <img src="icons/lenguajes/${hab.titulo.toLowerCase()}.png" alt="Logo de ${hab.titulo}">
             </figure>
         </div>
         <p>${hab.nivel}</p>

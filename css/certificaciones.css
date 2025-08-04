@@ -1,0 +1,122 @@
+.contenedor-principal-certificaciones {
+    margin: 10px;
+}
+
+.contenedor-principal-certificaciones .titulo {
+    border-radius: 5px;
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 8px;
+}
+
+.contenedor-principal-certificaciones .contenedor-certificaciones {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.tarjeta {
+    background-color: white;
+    border: 2px solid #aadaff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 220px;
+    perspective: 1000px;
+    position: relative;
+    width: 100%;
+}
+
+.tarjeta-interna {
+    border-radius: 12px;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.tarjeta.flip .tarjeta-interna {
+    transform: rotateY(180deg);
+}
+
+.tarjeta-frontal {
+    background-size: 70px; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.tarjeta-frontal,
+.tarjeta-back {
+    backface-visibility: hidden;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+}
+
+.tarjeta-cabecera {
+    align-items: center;
+    border-bottom: 1px solid #aadaff;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+}
+
+.tarjeta-cabecera h3 {
+    font-size: 1.2rem;
+}
+
+.logo-pais {
+    height: auto;
+    width: 40px;
+}
+
+.tarjeta-frontal button,
+.tarjeta-back button {
+    align-self: center;
+    background-color: #aadaff;
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px 16px;
+    transition: background-color 0.3s ease;
+}
+
+.tarjeta-frontal button:hover,
+.tarjeta-back button:hover {
+    background-color: #91cfff;
+}
+
+.tarjeta-back {
+    align-items: center;
+    background-color: #f9f9f9;
+    justify-content: center;
+    text-align: center;
+    transform: rotateY(180deg);
+}
+
+.tarjeta-back h4 {
+    color: #aadaff;
+    margin-bottom: 10px;
+}
+
+.tarjeta-back p {
+    color: #333;
+    font-size: 1rem;
+    padding: 0 10px;
+    user-select: none;
+}
