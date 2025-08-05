@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         datos.forEach(proyectoData => {
             const proyecto = document.createElement("div");
-            proyecto.classList.add("proyecto");
+            proyecto.classList.add("tarjeta");
             proyecto.style.backgroundColor = bgColor;
 
             proyecto.innerHTML = `

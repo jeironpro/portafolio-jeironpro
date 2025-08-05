@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     certificaciones.forEach(cert => {
         const certificacion = document.createElement("div");
-        certificacion.classList.add("certificacion");
+        certificacion.classList.add("tarjeta");
         certificacion.style.backgroundColor = "#aadaff";
 
         certificacion.innerHTML = `

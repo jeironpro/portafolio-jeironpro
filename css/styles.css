@@ -72,6 +72,138 @@ main {
     padding-top: 80px;
 }
 
+main .contenedor-principal {
+    margin: 10px;
+}
+
+main .contenedor-principal .titulo {
+    border-radius: 5px;
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 8px;
+}
+
+main .contenedor-principal .contenedor-tarjetas {
+    box-sizing: border-box;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    width: 100%;
+}
+
+main .contenedor-principal .contenedor-tarjetas .tarjeta {
+    align-items: center;
+    background-color: #F1F1F1;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 320px;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+main .contenedor-principal .contenedor-tarjetas .tarjeta h3 {
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+    height: 24px;
+    justify-content: center;
+    margin: 0;
+}
+
+main .contenedor-principal .contenedor-tarjetas .tarjeta p {
+    align-items: center;
+    display: flex;
+    font-size: 16px;
+    height: 80px;
+    justify-content: center;
+    margin: 0;
+    max-width: 90%;
+}
+
+main .contenedor-principal .contenedor-tarjetas .tarjeta figure img {
+    width: 100px;
+}
+
+main .contenedor-principal .contenedor-tarjetas .tarjeta ul {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 40px;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+main .contenedor-principal .contenedor-tarjetas .tarjeta ul li {
+    background-color: #fcfdff;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 6px 8px;
+}
+
+main .contenedor-principal .contenedor-tarjetas .tarjeta a {
+    align-items: center;
+    background-color: #fcfdff;
+    border-radius: 4px;
+    display: flex;
+    color: #000;
+    gap: 6px;
+    height: 40px;
+    justify-content: center;
+    padding: 10px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    width: 120px;
+}
+
+main .contenedor-principal .contenedor-tarjetas .tarjeta a:hover {
+    background-color: #000;
+    color: #fcfdff;
+}
+
+main .contenedor-principal .titulo .botones-proyectos {
+    display: flex;
+    gap: 10px;
+}
+
+main .contenedor-principal .titulo .botones-proyectos button {
+    border: none;
+    border-radius: 4px;
+    color: #292929;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px;
+    transition: transform 0.3s ease;
+    user-select: none;
+    width: 100px;
+}
+
+main .contenedor-principal .titulo .botones-proyectos .python {
+    background-color: #FFEB99;
+}
+
+main .contenedor-principal .titulo .botones-proyectos .html-css-js {
+    background-color: #FF9A6E;
+}
+
+main .contenedor-principal .titulo .botones-proyectos button.activo {
+    transform: scale(1.15);
+    z-index: -1;
+}
+
+main .contenedor-principal .titulo .botones-proyectos button i {
+    font-size: 14px;
+    margin: 3px;
+}
+
 footer {
     align-items: center;
     border-radius: 5px 5px 0 0;
