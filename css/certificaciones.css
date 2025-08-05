@@ -12,111 +12,81 @@
 }
 
 .contenedor-principal-certificaciones .contenedor-certificaciones {
+    box-sizing: border-box;
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
     padding: 20px;
     width: 100%;
 }
 
-.tarjeta {
-    background-color: white;
-    border: 2px solid #aadaff;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    height: 220px;
-    perspective: 1000px;
-    position: relative;
-    width: 100%;
-}
-
-.tarjeta-interna {
-    border-radius: 12px;
-    height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.3s ease;
-    width: 100%;
-}
-
-.tarjeta.flip .tarjeta-interna {
-    transform: rotateY(180deg);
-}
-
-.tarjeta-frontal {
-    background-size: 70px; 
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.tarjeta-frontal,
-.tarjeta-back {
-    backface-visibility: hidden;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.contenedor-principal-certificaciones .contenedor-certificaciones .certificacion {
+    align-items: center;
+    background-color: #F1F1F1;
+    border-radius: 8px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
-    padding: 20px;
-    position: absolute;
-    width: 100%;
-}
-
-.tarjeta-cabecera {
-    align-items: center;
-    border-bottom: 1px solid #aadaff;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 12px;
-    padding-bottom: 8px;
-}
-
-.tarjeta-cabecera h3 {
-    font-size: 1.2rem;
-}
-
-.logo-pais {
-    height: auto;
-    width: 40px;
-}
-
-.tarjeta-frontal button,
-.tarjeta-back button {
-    align-self: center;
-    background-color: #aadaff;
-    border: none;
-    border-radius: 8px;
-    color: #000;
-    cursor: pointer;
-    font-size: 1rem;
-    padding: 10px 16px;
-    transition: background-color 0.3s ease;
-}
-
-.tarjeta-frontal button:hover,
-.tarjeta-back button:hover {
-    background-color: #91cfff;
-}
-
-.tarjeta-back {
-    align-items: center;
-    background-color: #f9f9f9;
+    gap: 16px;
+    height: 320px;
     justify-content: center;
+    padding: 20px;
     text-align: center;
-    transform: rotateY(180deg);
 }
 
-.tarjeta-back h4 {
-    color: #aadaff;
-    margin-bottom: 10px;
+.contenedor-certificaciones .certificacion h3 {
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+    height: 24px;
+    justify-content: center;
+    margin: 0;
 }
 
-.tarjeta-back p {
-    color: #333;
-    font-size: 1rem;
-    padding: 0 10px;
-    user-select: none;
+.contenedor-certificaciones .certificacion p {
+    align-items: center;
+    display: flex;
+    font-size: 16px;
+    height: 80px;
+    justify-content: center;
+    margin: 0;
+    max-width: 90%;
+}
+
+.contenedor-certificaciones .certificacion ul {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 40px;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-certificaciones .certificacion ul li {
+    background-color: #fcfdff;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 6px 8px;
+}
+
+.contenedor-certificaciones .certificacion a {
+    align-items: center;
+    background-color: #fcfdff;
+    border-radius: 4px;
+    display: flex;
+    color: #000;
+    gap: 6px;
+    height: 40px;
+    justify-content: center;
+    padding: 10px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    width: 120px;
+}
+
+.contenedor-certificaciones .certificacion a:hover {
+    background-color: #000;
+    color: #fcfdff;
 }

@@ -11,10 +11,6 @@
     padding: 8px;
 }
 
-.contenedor-principal-proyectos .titulo-botones h2 {
-    margin: 10px 0;
-}
-
 .contenedor-principal-proyectos .titulo-botones .botones-proyectos {
     display: flex;
     gap: 10px;
@@ -26,11 +22,10 @@
     color: #292929;
     cursor: pointer;
     display: inline-block;
-    min-width: 20px;
-    padding: 10px;
+    padding: 5px;
     transition: transform 0.3s ease;
     user-select: none;
-    width: 100%;
+    width: 100px;
 }
 
 .contenedor-principal-proyectos .titulo-botones .botones-proyectos .python {
@@ -129,85 +124,4 @@
 .contenedor-proyectos .proyecto a:hover {
     background-color: #000;
     color: #fcfdff;
-}
-
-/* Tablets y móviles grandes (pantallas medianas) */
-@media (max-width: 991px) {
-  .contenedor-principal-proyectos .titulo-botones {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    margin: 15px;
-    padding: 6px;
-  }
-
-  .contenedor-principal-proyectos .titulo-botones .botones-proyectos {
-    flex-wrap: wrap;
-    width: 100%;
-  }
-
-  .contenedor-principal-proyectos .titulo-botones .botones-proyectos button {
-    width: auto;
-    padding: 8px 12px;
-    font-size: 14px;
-  }
-
-  .contenedor-principal-proyectos .contenedor-proyectos {
-    grid-template-columns: 1fr;
-    padding: 15px;
-    gap: 16px;
-  }
-
-  .contenedor-proyectos .proyecto {
-    height: auto;
-    padding: 16px;
-  }
-
-  .contenedor-proyectos .proyecto p {
-    height: auto;
-    font-size: 15px;
-  }
-
-  .contenedor-proyectos .proyecto ul {
-    flex-wrap: wrap;
-    height: auto;
-  }
-
-  .contenedor-proyectos .proyecto ul li {
-    font-size: 13px;
-    padding: 5px 7px;
-  }
-}
-
-/* Móviles pequeños (pantallas ≤ 600px) */
-@media (max-width: 600px) {
-  .contenedor-principal-proyectos {
-    margin: 5px;
-  }
-
-  .contenedor-principal-proyectos .titulo-botones h2 {
-    font-size: 1.3rem;
-  }
-
-  .contenedor-principal-proyectos .contenedor-proyectos {
-    padding: 10px;
-    gap: 14px;
-  }
-
-  .contenedor-proyectos .proyecto h3 {
-    font-size: 18px;
-  }
-
-  .contenedor-proyectos .proyecto p {
-    font-size: 14px;
-    max-width: 100%;
-    padding: 0 5px;
-  }
-
-  .contenedor-proyectos .proyecto a {
-    width: 100%;
-    height: auto;
-    padding: 8px;
-    font-size: 14px;
-  }
 }
