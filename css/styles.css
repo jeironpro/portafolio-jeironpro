@@ -30,6 +30,10 @@ header .contenedor-cabecera {
     padding: 20px 40px;
 }
 
+header .contenedor-cabecera .menu {
+    display: none;
+}
+
 header .contenedor-cabecera .nombre {
     font-size: 2rem;
     font-weight: 600;
@@ -218,4 +222,47 @@ footer {
 footer p {
     font-weight: 600;
     padding: 10px;
+}
+
+@media (max-width: 768px) {
+    header .contenedor-cabecera .nombre-menu {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    header .contenedor-cabecera .menu {
+        cursor: pointer;
+        display: block;
+        font-size: 30px;
+    }
+
+    header .contenedor-cabecera .lista-enlaces {
+        align-items: center;
+        background-color: #F1F1F1;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        left: 50%;
+        padding: 20px;
+        position: absolute;
+        top: 80px;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+
+    header .contenedor-cabecera .lista-enlaces.mostrar {
+        display: flex;
+    }
+
+    header .contenedor-cabecera .lista-enlaces .enlace {
+        font-size: 1rem;
+        padding: 10px 16px;
+        width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+
 }
