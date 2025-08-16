@@ -135,24 +135,6 @@ main .contenedor-principal .contenedor-tarjetas .tarjeta figure img {
     width: 100px;
 }
 
-main .contenedor-principal .contenedor-tarjetas .tarjeta ul {
-    align-items: center;
-    display: flex;
-    gap: 10px;
-    height: 40px;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-main .contenedor-principal .contenedor-tarjetas .tarjeta ul li {
-    background-color: #fcfdff;
-    border-radius: 3px;
-    font-size: 14px;
-    padding: 6px 8px;
-}
-
 main .contenedor-principal .contenedor-tarjetas .tarjeta a {
     align-items: center;
     background-color: #fcfdff;
@@ -289,9 +271,33 @@ footer p {
     main .contenedor-principal .contenedor-tarjetas .tarjeta {
         gap: 25px;
     }
+
+    main .contenedor-principal .contenedor-tarjetas .tarjeta h3 {
+        font-size: 16px;
+        height: 20px;
+    }
+
+    main .contenedor-principal .contenedor-tarjetas .tarjeta p {
+        font-size: 14px;
+        height: 80px;
+    }
+
+    main .contenedor-principal .contenedor-tarjetas .tarjeta figure img {
+        width: 80px;
+    }
 }
 
 @media (max-width: 480px) {
+    main .contenedor-principal .contenedor-tarjetas .tarjeta h3 {
+        font-size: 14px;
+        height: 18px;
+    }
+
+    main .contenedor-principal .contenedor-tarjetas .tarjeta p {
+        font-size: 12px;
+        height: 70px;
+    }
+
     footer p {
         font-size: 12px;
     }
