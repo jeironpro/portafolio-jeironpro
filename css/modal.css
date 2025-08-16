@@ -67,10 +67,8 @@
         font-size: 1rem;
         height: 30px;
         line-height: 1;
+        right: -5px;
+        top: -5px;
         width: 30px;
     }
-}
-
-@media (max-width: 480px) {
-    
 }
