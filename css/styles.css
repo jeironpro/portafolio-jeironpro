@@ -225,6 +225,10 @@ footer p {
 }
 
 @media (max-width: 768px) {
+    header .contenedor-cabecera {
+        padding: 15px 20px;
+    }
+
     header .contenedor-cabecera .nombre-menu {
         align-items: center;
         display: flex;
@@ -247,7 +251,7 @@ footer p {
         left: 50%;
         padding: 20px;
         position: absolute;
-        top: 80px;
+        top: 70px;
         transform: translateX(-50%);
         width: 100%;
     }
