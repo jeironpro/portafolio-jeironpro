@@ -266,6 +266,29 @@ footer p {
         width: 300px;
     }
 
+    main .contenedor-principal .titulo {
+        font-size: 16px;
+    }
+
+    main .contenedor-principal .titulo .botones-proyectos {
+        gap: 20px;
+    }
+
+    main .contenedor-principal .titulo .botones-proyectos button {
+        width: 60px;
+    }
+
+    main .contenedor-principal .titulo .botones-proyectos button i {
+        font-size: 10px;
+    }
+
+    main .contenedor-principal .contenedor-tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    main .contenedor-principal .contenedor-tarjetas .tarjeta {
+        gap: 25px;
+    }
 }
 
 @media (max-width: 480px) {
