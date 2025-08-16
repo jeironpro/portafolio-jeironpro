@@ -4,9 +4,10 @@
     display: none;
     height: 100vh;
     justify-content: center;
+    left: 0;
     position: fixed;
     overflow: hidden;
-    top: 0; left: 0;
+    top: 0; 
     user-select: none;
     width: 100vw;
     z-index: 1000;
@@ -53,7 +54,21 @@
 }
 
 @media (max-width: 768px) {
-    
+    .modal-contenido {
+        max-height: 90vh;
+        max-width: 95vw;
+    }
+
+    .modal-contenido img {
+        width: 100%;
+    }
+
+    .modal-cerrar {
+        font-size: 1rem;
+        height: 30px;
+        line-height: 1;
+        width: 30px;
+    }
 }
 
 @media (max-width: 480px) {
