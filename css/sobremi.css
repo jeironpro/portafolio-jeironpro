@@ -43,10 +43,22 @@
     padding: 0 10px;
 }
 
-@media (max-width: 768px) {
-    
-}
-
 @media (max-width: 480px) {
-    
+    .contenedor-principal-sobremi {
+        padding: 20px 10px;
+    }
+
+    .contenedor-principal-sobremi .perfil h2 {
+        font-size: 28px;
+    }
+
+    .contenedor-principal-sobremi .perfil figure img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .contenedor-principal-sobremi .perfil .sobremi p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
 }
