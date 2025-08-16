@@ -45,7 +45,7 @@
 
 @media (max-width: 480px) {  
     .contenedor-principal-sobremi {
-        min-height: none;
+        min-height: auto;
         padding: 10px;
     }
 
