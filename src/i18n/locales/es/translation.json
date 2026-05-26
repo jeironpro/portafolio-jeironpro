@@ -1,0 +1,255 @@
+{
+    "nav": {
+        "projects": "Proyectos",
+        "skills": "Habilidades",
+        "contact": "Contacto",
+        "styleGuide": "Guia"
+    },
+    "hero": {
+        "role": "Desarrollador",
+        "heading": {
+            "before": "Creando",
+            "highlight": "experiencias",
+            "after": "digitales que importan"
+        },
+        "bio": "Desarrollador apasionado por el codigo limpio, las arquitecturas solidas y el diseno centrado en el usuario.",
+        "ctaProjects": "Ver proyectos",
+        "ctaContact": "Contacto",
+        "scroll": "Desplazate"
+    },
+    "about": {
+        "title": "Sobre mi",
+        "stats": {
+            "experience": {
+                "label": "Experiencia",
+                "suffix": "anos"
+            },
+            "projects": {
+                "label": "Proyectos",
+                "suffix": "creados"
+            },
+            "languages": {
+                "label": "Lenguajes",
+                "suffix": "aprendidos"
+            },
+            "formations": {
+                "label": "Formaciones",
+                "suffix": "certificaciones"
+            }
+        }
+    },
+    "skills": {
+        "title": "Habilidades",
+        "heading": "Tecnologias que domino",
+        "subtitle": "Herramientas y tecnologias con las que trabajo dia a dia.",
+        "categories": {
+            "frontend": "Frontend",
+            "backend": "Backend",
+            "language": "Lenguaje",
+            "mobile": "Movil",
+            "devops": "DevOps",
+            "tools": "Herramientas",
+            "design": "Diseno"
+        },
+        "data": {
+            "react": "React",
+            "javascript": "JavaScript",
+            "typescript": "TypeScript",
+            "python": "Python",
+            "django": "Django",
+            "drf": "DRF",
+            "reactNative": "React Native",
+            "nodejs": "Node JS",
+            "postgresql": "PostgreSQL",
+            "docker": "Docker",
+            "git": "Git",
+            "css": "CSS",
+            "html": "HTML",
+            "figma": "Figma",
+            "jira": "Jira",
+            "java": "Java"
+        }
+    },
+    "projects": {
+        "title": "Proyectos",
+        "heading": "Trabajos seleccionados",
+        "subtitle": "Cada proyecto representa un desafio unico y una solucion pensada al detalle.",
+        "viewSite": "Visitar sitio",
+        "viewCode": "Ver codigo",
+        "data": {
+            "alphaFlask": {
+                "title": "Alpha Inventory",
+                "description": "Aplicacion web para la gestion de inventario construida con Flask.",
+                "longDescription": "Alpha Inventory es una aplicación web para la gestión de inventario en negocios / tiendas fisicos, donde desarrolle el backend. Este proyecto fue creado como entrega final de mi formación Diseño y Creación de Software en el Instituto Nacional de Formación Técnico Profesional en República Dominicana."
+            },
+            "alphaDjango": {
+                "title": "Alpha Inventory",
+                "description": "Aplicacion web para la gestion de inventario construida con Django.",
+                "longDescription": "Alpha Inventory es una aplicación web para la gestión de inventario en negocios / tiendas fisicos donde desarrolle el backend. Esta es una variante del proyecto desarrollada en Django."
+            },
+            "echotest": {
+                "title": "Echotest",
+                "description": "Sistema de evaluación automática de programas Java construido en Python.",
+                "longDescription": "Echotest es un sistema desarrollado en Python que permite evaluar automáticamente programas Java. El sistema compila, realiza pruebas de estructuras y compilación, y compara las salidas generadas por el programa Java con los resultados esperados, mostrando de manera detallada las pruebas que se han superado y las que no."
+            },
+            "prestamosMobile": {
+                "title": "Prestamos Taveras Mobile",
+                "description": "Aplicación móvil para el control de prestamos construida en React Native + Expo y con backend desacoplado",
+                "longDescription": "Prestamos Taveras en una aplicación móvil con backend desacoplado. Esta aplicacíon permite a los usuarios autenticarse mediante JWT y ver el estado actual de su prestamo y solicitar nuevos prestamos."
+            },
+            "prestamosBackend": {
+                "title": "Prestamos Taveras Backend",
+                "description": "API Rest para la aplicación móvil para el control de prestamos construida en Django + DRF.",
+                "longDescription": "API Rest donde se exponen los endpoints para que la aplicación móvil se comunique con la base de datos."
+            },
+            "nexus": {
+                "title": "Nexus Inventory",
+                "description": "Aplicación web para la gestión empresarial de inventario construida en Django + DRF y HTML + CSS + JS.",
+                "longDescription": "Nexus Inventory es una aplicación web para la gestión empresarial que permite controlar de forma centralizada el inventario, las ventas, las compras, las devoluciones, los clientes y los proveedores. El sistema está divido en roles Administrador, Cajero, Encargado de compras y ventas. En este proyecto desarrolle el backend y la comunicación con Fetch entre el frontend y el backend. Este proyecto es monorepo."
+            }
+        }
+    },
+    "contact": {
+        "title": "Contacto",
+        "heading": "Hablemos",
+        "subtitle": "Un proyecto, una idea o simplemente saludar. Elige como conectamos.",
+        "form": {
+            "name": "Tu nombre",
+            "email": "Tu email",
+            "message": "Cuentame que tienes en mente...",
+            "send": "Enviar mensaje",
+            "sent": "Enviado"
+        },
+        "response": "Respuesta en < 24h",
+        "channelEmail": "Email"
+    },
+    "styleGuide": {
+        "title": "Guia de Estilos",
+        "description": "Sistema de diseno del portafolio. Colores, tipografia, espaciado y componentes.",
+        "colors": "Colores",
+        "colorsDesc": "Tokens de color organizados por categoria.",
+        "darkVars": "Variables de Tema Oscuro",
+        "copied": "Copiado",
+        "palette": {
+            "azules": "Azules",
+            "naranjas": "Naranjas",
+            "neutrales": "Neutrales",
+            "azulPrincipal": {
+                "name": "Azul Principal",
+                "usage": "Color primario - Enlaces, botones principales, acentos"
+            },
+            "azulOscuro": {
+                "name": "Azul Oscuro",
+                "usage": "Headers, navegacion, texto de encabezados"
+            },
+            "azulClaro": {
+                "name": "Azul Claro",
+                "usage": "Fondos sutiles, hover states"
+            },
+            "azulMuyClaro": {
+                "name": "Azul Muy Claro",
+                "usage": "Fondos de secciones, tarjetas"
+            },
+            "naranjaPrincipal": {
+                "name": "Naranja Principal",
+                "usage": "Color secundario - CTAs, elementos destacados"
+            },
+            "naranjaOscuro": {
+                "name": "Naranja Oscuro",
+                "usage": "Alertas importantes, estados activos"
+            },
+            "naranjaClaro": {
+                "name": "Naranja Claro",
+                "usage": "Badges, etiquetas, elementos interactivos"
+            },
+            "naranjaMuyClaro": {
+                "name": "Naranja Muy Claro",
+                "usage": "Fondos de avisos, highlights suaves"
+            },
+            "grisOscuro": {
+                "name": "Gris Oscuro",
+                "usage": "Texto principal, contenido importante"
+            },
+            "grisMedio": {
+                "name": "Gris Medio",
+                "usage": "Texto secundario, descripciones"
+            },
+            "grisClaro": {
+                "name": "Gris Claro",
+                "usage": "Bordes, divisores, fondos neutrales"
+            },
+            "fondoClaro": {
+                "name": "Fondo Claro",
+                "usage": "Fondo principal del sitio (light mode)"
+            }
+        },
+        "typography": {
+            "title": "Tipografia",
+            "family": "Familia:",
+            "weights": "Pesos:",
+            "scale": "Escala Tipografica",
+            "sample": "Montserrat {{weight}} - El sol brilla sobre la colina.",
+            "sizes": {
+                "xs": "Etiquetas, metadata",
+                "sm": "Cuerpo pequeno, descripciones",
+                "base": "Cuerpo de texto",
+                "lg": "Texto destacado",
+                "xl": "Subtitulos",
+                "2xl": "Titulos de seccion",
+                "3xl": "Titulos grandes",
+                "4xl": "Hero pequeno",
+                "5xl": "Hero principal",
+                "6xl": "Hero grande"
+            }
+        },
+        "spacing": {
+            "title": "Espaciado",
+            "description": "Sistema de espaciado uniforme.",
+            "list": {
+                "1": "Espaciado minimo",
+                "2": "Gap entre elementos cercanos",
+                "3": "Padding interno pequeno",
+                "4": "Padding base",
+                "5": "Gap entre elementos",
+                "6": "Padding de seccion",
+                "8": "Gap entre secciones",
+                "10": "Padding de contenedor",
+                "12": "Margen de seccion",
+                "16": "Separacion entre bloques",
+                "20": "Padding de pagina",
+                "24": "Separacion de secciones grandes"
+            }
+        },
+        "components": {
+            "title": "Componentes",
+            "description": "Ejemplos de componentes con el sistema de diseno.",
+            "buttons": "Botones",
+            "primary": "Boton Primario",
+            "outline": "Boton Outline",
+            "secondary": "Boton Secundario",
+            "glass": "Boton Glass",
+            "cards": "Tarjetas",
+            "cardSimple": "Card Simple",
+            "cardSimpleDesc": "Tarjeta con fondo semitransparente y borde sutil.",
+            "cardGlass": "Card Glass",
+            "cardGlassDesc": "Efecto glassmorphism con backdrop-filter blur.",
+            "forms": "Formularios",
+            "inputText": "Input de texto",
+            "textarea": "Textarea",
+            "badgeAzul": "Badge Azul",
+            "badgeNaranja": "Badge Naranja",
+            "navigation": "Navegacion",
+            "navLogo": "Logo",
+            "navHome": "Inicio",
+            "navProjects": "Proyectos",
+            "navContact": "Contacto",
+            "navCta": "Boton"
+        },
+        "footer": "Libro de Estilos v1.0 - Actualizado el {{date}}"
+    },
+    "footer": {
+        "tagline": "Creando productos digitales que marcan la diferencia.",
+        "copyright": "Todos los derechos reservados.",
+        "backToTop": "Volver arriba"
+    }
+}

@@ -1,0 +1,145 @@
+@import url('./styles/tokens.css');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    color: var(--color-text-primary);
+    background: var(--color-bg);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+::selection {
+    background: rgba(var(--azul-principal-rgb), 0.3);
+    color: var(--color-text-primary);
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(var(--azul-principal-rgb), 0.3);
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(var(--azul-principal-rgb), 0.5);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+}
+
+input, textarea, button {
+    font-family: inherit;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    /* About: stack columns, reduce padding, smaller stat cards */
+    .about-layout {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    .about-glass {
+        padding: 1.5rem !important;
+    }
+    .about-stat {
+        min-height: 90px !important;
+    }
+    .about-stat div:first-child {
+        font-size: 1.6rem !important;
+    }
+
+    /* Contact: stack channels, inputs, footer */
+    .contact-channels {
+        grid-template-columns: 1fr !important;
+    }
+    .contact-input-row {
+        grid-template-columns: 1fr !important;
+    }
+    .contact-form-foot {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+    .contact-form-foot button {
+        width: 100% !important;
+    }
+
+    /* Skills: smaller cards, narrower skill names */
+    .skills-cat-card {
+        padding: 1.25rem !important;
+    }
+    .skills-name {
+        min-width: 80px !important;
+    }
+    .skills-name + div {
+        min-width: 0 !important;
+    }
+
+    /* Projects: single column grid */
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Footer: stack bottom row, wrap social */
+    .footer-bottom {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 0.75rem !important;
+    }
+    .footer-social {
+        flex-wrap: wrap !important;
+    }
+
+    /* TiltCard: reduced padding */
+    .tilt-card {
+        padding: 1.25rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-stats {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav-pill {
+        gap: 0.05rem !important;
+        padding: 0.3rem 0.35rem !important;
+    }
+    .nav-pill-btn {
+        padding: 0.3rem 0.55rem !important;
+        font-size: 0.72rem !important;
+    }
+}
+
+

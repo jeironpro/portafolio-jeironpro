@@ -1,0 +1,222 @@
+{
+    "nav": {
+        "projects": "Projectes",
+        "skills": "Habilitats",
+        "contact": "Contacte",
+        "styleGuide": "Guia"
+    },
+    "hero": {
+        "role": "Desenvolupador",
+        "heading": {
+            "before": "Creant",
+            "highlight": "experiències",
+            "after": "que importen"
+        },
+        "bio": "Desenvolupador apassionat pel codi net, les arquitectures sòlides i el disseny centrat en l'usuari.",
+        "ctaProjects": "Veure projectes",
+        "ctaContact": "Contacte",
+        "scroll": "Desplaça't"
+    },
+    "about": {
+        "title": "Sobre mi",
+        "stats": {
+            "experience": { "label": "Experiència", "suffix": "anys" },
+            "projects": { "label": "Projectes", "suffix": "creats" },
+            "languages": { "label": "Llenguatges", "suffix": "apresos" },
+            "formations": { "label": "Formacions", "suffix": "certificacions" }
+        }
+    },
+    "skills": {
+        "title": "Habilitats",
+        "heading": "Tecnologies que domino",
+        "subtitle": "Eines i tecnologies amb les que treballo dia a dia.",
+        "categories": {
+            "frontend": "Frontend",
+            "backend": "Backend",
+            "language": "Llenguatge",
+            "mobile": "Mòbil",
+            "devops": "DevOps",
+            "tools": "Eines",
+            "design": "Disseny"
+        },
+        "data": {
+            "react": "React",
+            "javascript": "JavaScript",
+            "typescript": "TypeScript",
+            "python": "Python",
+            "django": "Django",
+            "drf": "DRF",
+            "reactNative": "React Native",
+            "nodejs": "Node JS",
+            "postgresql": "PostgreSQL",
+            "docker": "Docker",
+            "git": "Git",
+            "css": "CSS",
+            "html": "HTML",
+            "figma": "Figma",
+            "jira": "Jira",
+            "java": "Java"
+        }
+    },
+    "projects": {
+        "title": "Projectes",
+        "heading": "Treballs seleccionats",
+        "subtitle": "Cada projecte representa un repte únic i una solució pensada al detall.",
+        "viewSite": "Visitar el lloc",
+        "viewCode": "Veure codi",
+        "data": {
+            "alphaFlask": {
+                "title": "Alpha Inventory",
+                "description": "Aplicació web per a la gestió d'inventari construïda amb Flask.",
+                "longDescription": "Alpha Inventory és una aplicació web per a la gestió d'inventari en negocis / botigues físiques, on vaig desenvolupar el backend. Aquest projecte va ser creat com a lliurament final de la meva formació Disseny i Creació de Programari a l'Institut Nacional de Formació Tècnico Professional a la República Dominicana."
+            },
+            "alphaDjango": {
+                "title": "Alpha Inventory",
+                "description": "Aplicació web per a la gestió d'inventari construïda amb Django.",
+                "longDescription": "Alpha Inventory és una aplicació web per a la gestió d'inventari en negocis / botigues físiques on vaig desenvolupar el backend. Aquesta és una variant del projecte desenvolupada en Django."
+            },
+            "echotest": {
+                "title": "Echotest",
+                "description": "Sistema d'avaluació automàtica de programes Java construït en Python.",
+                "longDescription": "Echotest és un sistema desenvolupat en Python que permet avaluar automàticament programes Java. El sistema compila, realitza proves d'estructures i compilació, i compara les sortides generades pel programa Java amb els resultats esperats, mostrant de manera detallada les proves que s'han superat i les que no."
+            },
+            "prestamosMobile": {
+                "title": "Prestamos Taveras Mobile",
+                "description": "Aplicació mòbil per al control de préstecs construïda en React Native + Expo i amb backend desacoblat.",
+                "longDescription": "Prestamos Taveras és una aplicació mòbil amb backend desacoblat. Aquesta aplicació permet als usuaris autenticar-se mitjançant JWT i veure l'estat actual del seu préstec i sol·licitar nous préstecs."
+            },
+            "prestamosBackend": {
+                "title": "Prestamos Taveras Backend",
+                "description": "API Rest per a l'aplicació mòbil per al control de préstecs construïda en Django + DRF.",
+                "longDescription": "API Rest on s'exposen els endpoints perquè l'aplicació mòbil es comuniqui amb la base de dades."
+            },
+            "nexus": {
+                "title": "Nexus Inventory",
+                "description": "Aplicació web per a la gestió empresarial d'inventari construïda en Django + DRF i HTML + CSS + JS.",
+                "longDescription": "Nexus Inventory és una aplicació web per a la gestió empresarial que permet controlar de forma centralitzada l'inventari, les vendes, les compres, les devolucions, els clients i els proveïdors. El sistema està dividit en rols Administrador, Caixer, Encarregat de compres i vendes. En aquest projecte vaig desenvolupar el backend i la comunicació amb Fetch entre el frontend i el backend. Aquest projecte és monorepo."
+            }
+        }
+    },
+    "contact": {
+        "title": "Contacte",
+        "heading": "Parlem",
+        "subtitle": "Un projecte, una idea o simplement saludar. Tria com connectem.",
+        "form": {
+            "name": "El teu nom",
+            "email": "El teu email",
+            "message": "Explica'm què tens al cap...",
+            "send": "Enviar missatge",
+            "sent": "Enviat"
+        },
+        "response": "Resposta garantida en < 24h",
+        "channelEmail": "Email"
+    },
+    "styleGuide": {
+        "title": "Guia d'Estils",
+        "description": "Sistema de disseny del portafoli. Colors, tipografia, espaiat i components.",
+        "colors": "Colors",
+        "colorsDesc": "Tokens de color organitzats per categoria.",
+        "darkVars": "Variables de Tema Fosc",
+        "copied": "Copiat",
+        "palette": {
+            "azules": "Blaus",
+            "naranjas": "Taronjes",
+            "neutrales": "Neutres",
+            "azulPrincipal": {
+                "name": "Blau Principal",
+                "usage": "Color primari - Enllaços, botons principals, accents"
+            },
+            "azulOscuro": { "name": "Blau Fosc", "usage": "Capçaleres, navegació, text de títols" },
+            "azulClaro": { "name": "Blau Clar", "usage": "Fons subtils, hover states" },
+            "azulMuyClaro": { "name": "Blau Molt Clar", "usage": "Fons de seccions, targetes" },
+            "naranjaPrincipal": {
+                "name": "Taronja Principal",
+                "usage": "Color secundari - CTAs, elements destacats"
+            },
+            "naranjaOscuro": {
+                "name": "Taronja Fosc",
+                "usage": "Alertes importants, estats actius"
+            },
+            "naranjaClaro": {
+                "name": "Taronja Clar",
+                "usage": "Badges, etiquetes, elements interactius"
+            },
+            "naranjaMuyClaro": {
+                "name": "Taronja Molt Clar",
+                "usage": "Fons d'avisos, highlights suaus"
+            },
+            "grisOscuro": { "name": "Gris Fosc", "usage": "Text principal, contingut important" },
+            "grisMedio": { "name": "Gris Mitjà", "usage": "Text secundari, descripcions" },
+            "grisClaro": { "name": "Gris Clar", "usage": "Vores, divisors, fons neutres" },
+            "fondoClaro": { "name": "Fons Clar", "usage": "Fons principal del lloc (mode clar)" }
+        },
+        "typography": {
+            "title": "Tipografia",
+            "family": "Família:",
+            "weights": "Pesos:",
+            "scale": "Escala Tipogràfica",
+            "sample": "Montserrat {{weight}} - El sol brilla sobre el turó.",
+            "sizes": {
+                "xs": "Etiquetes, metadata",
+                "sm": "Cos petit, descripcions",
+                "base": "Cos de text",
+                "lg": "Text destacat",
+                "xl": "Subtítols",
+                "2xl": "Títols de secció",
+                "3xl": "Títols grans",
+                "4xl": "Hero petit",
+                "5xl": "Hero principal",
+                "6xl": "Hero gran"
+            }
+        },
+        "spacing": {
+            "title": "Espaiat",
+            "description": "Sistema d'espaiat uniforme.",
+            "list": {
+                "1": "Espaiat mínim",
+                "2": "Gap entre elements propers",
+                "3": "Padding intern petit",
+                "4": "Padding base",
+                "5": "Gap entre elements",
+                "6": "Padding de secció",
+                "8": "Gap entre seccions",
+                "10": "Padding de contenidor",
+                "12": "Marge de secció",
+                "16": "Separació entre blocs",
+                "20": "Padding de pàgina",
+                "24": "Separació de seccions grans"
+            }
+        },
+        "components": {
+            "title": "Components",
+            "description": "Exemples de components amb el sistema de disseny.",
+            "buttons": "Botons",
+            "primary": "Botó Primari",
+            "outline": "Botó Outline",
+            "secondary": "Botó Secundari",
+            "glass": "Botó Glass",
+            "cards": "Targetes",
+            "cardSimple": "Targeta Simple",
+            "cardSimpleDesc": "Targeta amb fons semitransparent i vora subtil.",
+            "cardGlass": "Targeta Glass",
+            "cardGlassDesc": "Efecte glassmorphism amb backdrop-filter blur.",
+            "forms": "Formularis",
+            "inputText": "Input de text",
+            "textarea": "Textarea",
+            "badgeAzul": "Badge Blau",
+            "badgeNaranja": "Badge Taronja",
+            "navigation": "Navegació",
+            "navLogo": "Logotip",
+            "navHome": "Inici",
+            "navProjects": "Projectes",
+            "navContact": "Contacte",
+            "navCta": "Botó"
+        },
+        "footer": "Guia d'Estils v1.0 - Actualitzat el {{date}}"
+    },
+    "footer": {
+        "tagline": "Creant productes digitals que marquen la diferència.",
+        "copyright": "Tots els drets reservats.",
+        "backToTop": "Tornar a dalt"
+    }
+}
