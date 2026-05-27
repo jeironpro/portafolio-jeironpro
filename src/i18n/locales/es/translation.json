@@ -6,7 +6,7 @@
         "styleGuide": "Guia"
     },
     "hero": {
-        "role": "Desarrollador",
+        "role": "Desarrollador Full Stack",
         "heading": {
             "before": "Creando",
             "highlight": "experiencias",
@@ -14,8 +14,14 @@
         },
         "bio": "Desarrollador apasionado por el codigo limpio, las arquitecturas solidas y el diseno centrado en el usuario.",
         "ctaProjects": "Ver proyectos",
+        "ctaDownloadCV": "Descargar CV",
         "ctaContact": "Contacto",
-        "scroll": "Desplazate"
+        "scroll": "Desplazate",
+        "cv": {
+            "es": "Castellano",
+            "ca": "Català",
+            "en": "English"
+        }
     },
     "about": {
         "title": "Sobre mi",
@@ -80,7 +86,7 @@
             "alphaFlask": {
                 "title": "Alpha Inventory",
                 "description": "Aplicacion web para la gestion de inventario construida con Flask.",
-                "longDescription": "Alpha Inventory es una aplicación web para la gestión de inventario en negocios / tiendas fisicos, donde desarrolle el backend. Este proyecto fue creado como entrega final de mi formación Diseño y Creación de Software en el Instituto Nacional de Formación Técnico Profesional en República Dominicana."
+                "longDescription": "Alpha Inventory es una aplicación web para la gestión de inventario en negocios / tiendas fisicos, donde desarrolle el backend. Este proyecto fue la entrega final de mi formación Diseño y Creación de Software en el Instituto Nacional de Formación Técnico Profesional en República Dominicana."
             },
             "alphaDjango": {
                 "title": "Alpha Inventory",
@@ -105,7 +111,7 @@
             "nexus": {
                 "title": "Nexus Inventory",
                 "description": "Aplicación web para la gestión empresarial de inventario construida en Django + DRF y HTML + CSS + JS.",
-                "longDescription": "Nexus Inventory es una aplicación web para la gestión empresarial que permite controlar de forma centralizada el inventario, las ventas, las compras, las devoluciones, los clientes y los proveedores. El sistema está divido en roles Administrador, Cajero, Encargado de compras y ventas. En este proyecto desarrolle el backend y la comunicación con Fetch entre el frontend y el backend. Este proyecto es monorepo."
+                "longDescription": "Nexus Inventory es una aplicación web para la gestión empresarial que permite controlar de forma centralizada el inventario, las ventas, las compras, las devoluciones, los clientes y los proveedores. El sistema está divido en roles Administrador, Cajero, Encargado de compras y ventas. En este proyecto desarrolle el backend y la comunicación con Fetch entre el frontend y el backend. Este proyecto es monorepo y fue la entrega final de mi grado superior de Desarrollo de aplicaciones Web en el Instituto ITIC de Barcelona."
             }
         }
     },

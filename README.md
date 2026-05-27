@@ -1,10 +1,10 @@
-# Jeiron Espinal — Portafolio
+# Jeiron Espinal - Portafolio
 
-Portafolio personal con tematica oscura, fondo 3D de particulas y diseno glassmorphism. Construido con React, Vite y Three.js (React Three Fiber).
+Portafolio personal con temática oscura, fondo 3D de partículas y diseño glassmorphism. Construido con React, Vite y Three.js (React Three Fiber).
 
 ## Stack tecnológico
 
-| Tecnologia | Version |
+| Tecnología | Versión |
 |-----------|---------|
 | React | 18+ |
 | Vite | 5+ |
@@ -20,7 +20,7 @@ Portafolio personal con tematica oscura, fondo 3D de particulas y diseno glassmo
 src/
 ├── components/
 │   ├── layout/        # Navbar, Footer
-│   ├── scene/         # BackgroundCanvas (particulas 3D)
+│   ├── scene/         # BackgroundCanvas (partículas 3D)
 │   ├── sections/      # Hero, About, Projects, Skills, Contact
 │   └── ui/            # TiltCard, ProjectModal, ErrorBoundary
 ├── data/
@@ -28,48 +28,48 @@ src/
 ├── hooks/
 │   └── useStore.js    # Estado global (Zustand)
 ├── pages/
-│   └── StyleGuidePage.jsx  # Guia de estilos visual
+│   └── StyleGuidePage.jsx  # Guía de estilos visual
 ├── styles/
-│   └── tokens.css     # Sistema de diseno (colores, tipografia, sombras)
+│   └── tokens.css     # Sistema de diseño (colores, tipografía, sombras)
 ├── __tests__/
 │   └── helpers.test.js
-├── App.jsx            # Componente raiz
+├── App.jsx            # Componente raíz
 ├── main.jsx           # Entry point
 └── index.css          # Estilos globales
 ```
 
-## Diseno
+## Diseño
 
 - Sistema de tokens CSS en `src/styles/tokens.css`
 - Paleta: Azul (#2563EB) como primario, Naranja (#F97316) como secundario
 - Tipografia: Montserrat (todas las variantes)
 - Fondo oscuro con efectos glass (blur, backdrop-filter)
-- Particulas 3D que reaccionan al scroll y mouse
+- Partículas 3D que reaccionan al scroll y mouse
 
 ## Scripts
 
 ```bash
 npm install
 npm run dev      # Desarrollo con HMR
-npm run build    # Build de produccion
+npm run build    # Build de producción
 npm run preview  # Vista previa del build
 npm test         # Tests unitarios (Vitest)
 npm run lint     # ESLint + Stylelint
 ```
 
-## Personalizacion
+## Personalización
 
 Edita `src/data/portfolio.js` para cambiar:
 - `personalInfo`: nombre, email, redes sociales
 - `projects`: lista de proyectos
 - `skills`: habilidades con nivel (0-100)
 
-Los tokens de diseno se configuran en `src/styles/tokens.css`.
+Los tokens de diseño se configuran en `src/styles/tokens.css`.
 
 ## Reglas del proyecto
 
-- No se utilizan emojis en el codigo
-- Todo codigo escrito en castellano
-- Estructura semantica en HTML
+- No se utilizan emojis en el código
+- Todo el código escrito en español
+- Estructura semántica en HTML
 - Media queries para responsive
 - ESLint + Prettier + Stylelint configurados

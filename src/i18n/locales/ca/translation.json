@@ -6,7 +6,7 @@
         "styleGuide": "Guia"
     },
     "hero": {
-        "role": "Desenvolupador",
+        "role": "Desenvolupador Full Stack",
         "heading": {
             "before": "Creant",
             "highlight": "experiències",
@@ -14,8 +14,14 @@
         },
         "bio": "Desenvolupador apassionat pel codi net, les arquitectures sòlides i el disseny centrat en l'usuari.",
         "ctaProjects": "Veure projectes",
+        "ctaDownloadCV": "Descarregar CV",
         "ctaContact": "Contacte",
-        "scroll": "Desplaça't"
+        "scroll": "Desplaça't",
+        "cv": {
+            "es": "Castellà",
+            "ca": "Català",
+            "en": "Anglès"
+        }
     },
     "about": {
         "title": "Sobre mi",
@@ -93,7 +99,7 @@
             "nexus": {
                 "title": "Nexus Inventory",
                 "description": "Aplicació web per a la gestió empresarial d'inventari construïda en Django + DRF i HTML + CSS + JS.",
-                "longDescription": "Nexus Inventory és una aplicació web per a la gestió empresarial que permet controlar de forma centralitzada l'inventari, les vendes, les compres, les devolucions, els clients i els proveïdors. El sistema està dividit en rols Administrador, Caixer, Encarregat de compres i vendes. En aquest projecte vaig desenvolupar el backend i la comunicació amb Fetch entre el frontend i el backend. Aquest projecte és monorepo."
+                "longDescription": "Nexus Inventory és una aplicació web per a la gestió empresarial que permet controlar de forma centralitzada l'inventari, les vendes, les compres, les devolucions, els clients i els proveïdors. El sistema està dividit en rols Administrador, Caixer, Encarregat de compres i vendes. En aquest projecte vaig desenvolupar el backend i la comunicació amb Fetch entre el frontend i el backend. Aquest projecte és monorepo i va ser el lliurament final del meu grau superior de Desenvolupament d'aplicacions Web en l'Institut ITIC de Barcelona."
             }
         }
     },

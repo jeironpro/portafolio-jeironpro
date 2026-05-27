@@ -6,7 +6,7 @@
         "styleGuide": "Guide"
     },
     "hero": {
-        "role": "Developer",
+        "role": "Developer Full Stack",
         "heading": {
             "before": "Creating",
             "highlight": "experiences",
@@ -14,8 +14,14 @@
         },
         "bio": "Developer passionate about clean code, solid architectures, and user-centered design.",
         "ctaProjects": "View projects",
+        "ctaDownloadCV": "Download CV",
         "ctaContact": "Contact",
-        "scroll": "Scroll down"
+        "scroll": "Scroll down",
+        "cv": {
+            "es": "Spanish",
+            "ca": "Catalan",
+            "en": "English"
+        }
     },
     "about": {
         "title": "About me",
@@ -93,7 +99,7 @@
             "nexus": {
                 "title": "Nexus Inventory",
                 "description": "Enterprise inventory management web app built with Django + DRF and HTML + CSS + JS.",
-                "longDescription": "Nexus Inventory is a web application for enterprise management that provides centralized control over inventory, sales, purchases, returns, customers, and suppliers. The system is divided into Administrator, Cashier, and Purchasing/Sales Manager roles. I developed the backend and the Fetch communication between the frontend and backend. This project is a monorepo."
+                "longDescription": "Nexus Inventory is a web application for enterprise management that provides centralized control over inventory, sales, purchases, returns, customers, and suppliers. The system is divided into Administrator, Cashier, and Purchasing/Sales Manager roles. I developed the backend and the Fetch communication between the frontend and backend. This project is a monorepo and was the final delivery of my higher degree in Web Application Development at the ITIC Institute in Barcelona."
             }
         }
     },

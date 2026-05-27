@@ -1,10 +1,27 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 
+const CV_LANGUAGES = ['es', 'ca', 'en'];
+
 export default function HeroSection() {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const ref = useRef(null);
+    const dropdownRef = useRef(null);
     const [visible, setVisible] = useState(false);
+    const [cvOpen, setCvOpen] = useState(false);
+
+    const handleClickOutside = useCallback((e) => {
+        if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+            setCvOpen(false);
+        }
+    }, []);
+
+    useEffect(() => {
+        if (cvOpen) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, [cvOpen, handleClickOutside]);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -122,33 +139,108 @@ export default function HeroSection() {
                     >
                         {t('hero.ctaProjects')}
                     </a>
-                    <a
-                        href="#contact"
-                        style={{
-                            padding: '14px 32px',
-                            borderRadius: '12px',
-                            border: '1px solid var(--color-border-hover)',
-                            background: 'var(--color-glass-bg)',
-                            color: 'var(--color-text-primary)',
-                            fontFamily: 'var(--font-heading)',
-                            fontWeight: 600,
-                            fontSize: '0.9rem',
-                            cursor: 'pointer',
-                            textDecoration: 'none',
-                            backdropFilter: 'blur(8px)',
-                            transition: 'all 0.3s ease'
-                        }}
-                        onMouseEnter={(e) => {
-                            e.target.style.background = 'var(--color-glass-bg-hover)';
-                            e.target.style.borderColor = 'var(--color-border)';
-                        }}
-                        onMouseLeave={(e) => {
-                            e.target.style.background = 'var(--color-glass-bg)';
-                            e.target.style.borderColor = 'var(--color-border-hover)';
-                        }}
-                    >
-                        {t('hero.ctaContact')}
-                    </a>
+                    <div ref={dropdownRef} style={{ position: 'relative' }}>
+                        <button
+                            onClick={() => setCvOpen((prev) => !prev)}
+                            style={{
+                                padding: '14px 32px',
+                                borderRadius: '12px',
+                                border: '1px solid var(--color-border-hover)',
+                                background: 'var(--color-glass-bg)',
+                                color: 'var(--color-text-primary)',
+                                fontFamily: 'var(--font-heading)',
+                                fontWeight: 600,
+                                fontSize: '0.9rem',
+                                cursor: 'pointer',
+                                backdropFilter: 'blur(8px)',
+                                transition: 'all 0.3s ease',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '8px',
+                                lineHeight: 1
+                            }}
+                            onMouseEnter={(e) => {
+                                e.currentTarget.style.background = 'var(--color-glass-bg-hover)';
+                                e.currentTarget.style.borderColor = 'var(--color-border)';
+                            }}
+                            onMouseLeave={(e) => {
+                                if (!cvOpen) {
+                                    e.currentTarget.style.background = 'var(--color-glass-bg)';
+                                    e.currentTarget.style.borderColor = 'var(--color-border-hover)';
+                                }
+                            }}
+                            aria-label={t('hero.ctaDownloadCV')}
+                            aria-expanded={cvOpen}
+                        >
+                            {t('hero.ctaDownloadCV')}
+                            <svg
+                                width="10"
+                                height="6"
+                                viewBox="0 0 10 6"
+                                fill="none"
+                                style={{
+                                    transition: 'transform 0.3s ease',
+                                    transform: cvOpen ? 'rotate(180deg)' : 'rotate(0deg)'
+                                }}
+                            >
+                                <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                        </button>
+                        {cvOpen && (
+                            <div
+                                style={{
+                                    position: 'absolute',
+                                    top: 'calc(100% + 6px)',
+                                    left: '50%',
+                                    transform: 'translateX(-50%)',
+                                    minWidth: '180px',
+                                    background: 'rgba(var(--color-bg-rgb), 0.85)',
+                                    backdropFilter: 'blur(20px) saturate(1.4)',
+                                    WebkitBackdropFilter: 'blur(20px) saturate(1.4)',
+                                    border: '1px solid var(--color-glass-border)',
+                                    borderRadius: '12px',
+                                    padding: '6px',
+                                    boxShadow: '0 8px 32px rgba(0,0,0,0.25)',
+                                    zIndex: 10,
+                                    overflow: 'hidden'
+                                }}
+                            >
+                                {CV_LANGUAGES.map((lang) => (
+                                    <a
+                                        key={lang}
+                                        href={`/cv/cv-${lang}.pdf`}
+                                        download
+                                        onClick={() => setCvOpen(false)}
+                                        style={{
+                                            display: 'block',
+                                            padding: '10px 16px',
+                                            borderRadius: '8px',
+                                            textDecoration: 'none',
+                                            color: 'var(--color-text-primary)',
+                                            fontFamily: 'var(--font-body)',
+                                            fontSize: '0.85rem',
+                                            fontWeight: i18n.language === lang ? 600 : 400,
+                                            background: i18n.language === lang
+                                                ? 'rgba(var(--naranja-principal-rgb), 0.1)'
+                                                : 'transparent',
+                                            transition: 'background 0.2s ease',
+                                            cursor: 'pointer'
+                                        }}
+                                        onMouseEnter={(e) => {
+                                            e.currentTarget.style.background = 'var(--color-glass-bg-hover)';
+                                        }}
+                                        onMouseLeave={(e) => {
+                                            e.currentTarget.style.background = i18n.language === lang
+                                                ? 'rgba(var(--naranja-principal-rgb), 0.1)'
+                                                : 'transparent';
+                                        }}
+                                    >
+                                        {t(`hero.cv.${lang}`)}
+                                    </a>
+                                ))}
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
 
