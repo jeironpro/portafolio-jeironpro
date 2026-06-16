@@ -2,7 +2,7 @@ export const personalInfo = {
     name: 'Jeiron Espinal',
     email: 'jeironprogrammer@gmail.com',
     github: 'https://github.com/jeironpro',
-    linkedin: 'https://linkedin.com/in/jeironpro'
+    linkedin: 'https://linkedin.com/in/jeironespinal'
 };
 
 export const projects = [
@@ -12,7 +12,7 @@ export const projects = [
         descriptionKey: 'projects.data.alphaFlask.description',
         longDescriptionKey: 'projects.data.alphaFlask.longDescription',
         tags: ['Flask', 'MySQL', 'HTML', 'CSS', 'JS'],
-        image: null,
+        image: '/images/alpha-inventory.png',
         url: null,
         github: 'https://github.com/jeironpro/alpha-inventory-flask',
         color: '#4a90e2',
@@ -24,7 +24,7 @@ export const projects = [
         descriptionKey: 'projects.data.alphaDjango.description',
         longDescriptionKey: 'projects.data.alphaDjango.longDescription',
         tags: ['Django', 'MySQL', 'HTML', 'CSS', 'JS'],
-        image: null,
+        image: '/images/alpha-inventory.png',
         url: null,
         github: 'https://github.com/jeironpro/alpha-inventory-django',
         color: '#ed2301',
@@ -48,7 +48,7 @@ export const projects = [
         descriptionKey: 'projects.data.prestamosMobile.description',
         longDescriptionKey: 'projects.data.prestamosMobile.longDescription',
         tags: ['React Native', 'Expo'],
-        image: null,
+        image: '/images/prestamos-taveras.png',
         url: null,
         github: null,
         color: '#9b59b6',
@@ -72,7 +72,7 @@ export const projects = [
         descriptionKey: 'projects.data.nexus.description',
         longDescriptionKey: 'projects.data.nexus.longDescription',
         tags: ['HTML', 'CSS', 'JS', 'Django', 'DRF', 'PostgreSQL', 'Docker', 'JWT', 'Sentry'],
-        image: null,
+        image: '/images/nexus-inventory.png',
         url: null,
         github: null,
         color: '#e74c3c',

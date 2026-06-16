@@ -17,47 +17,14 @@ export default class ErrorBoundary extends Component {
     render() {
         if (this.state.hasError) {
             return (
-                <div
-                    style={{
-                        position: 'fixed',
-                        inset: 0,
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        background: 'var(--color-bg)',
-                        color: 'var(--color-text-primary)',
-                        fontFamily: 'var(--font-body)',
-                        padding: '2rem',
-                        textAlign: 'center'
-                    }}
-                >
-                    <h1
-                        style={{
-                            fontFamily: 'var(--font-heading)',
-                            fontSize: '2rem',
-                            color: 'var(--color-primary)',
-                            marginBottom: '1rem'
-                        }}
-                    >
-                        Algo salio mal
-                    </h1>
-                    <p style={{ color: 'var(--color-text-secondary)', marginBottom: '2rem' }}>
-                        Hubo un error al cargar la escena 3D. Intenta recargar la pagina.
+                <div className="error-page">
+                    <h1 className="error-title">Algo salio mal</h1>
+                    <p className="error-desc">
+                        Ocurrio un error inesperado. Intenta recargar la pagina.
                     </p>
                     <button
                         onClick={() => window.location.reload()}
-                        style={{
-                            padding: '12px 28px',
-                            borderRadius: '8px',
-                            border: 'none',
-                            background: 'var(--color-primary)',
-                            color: 'var(--color-text-primary)',
-                            fontFamily: 'var(--font-heading)',
-                            fontWeight: 600,
-                            fontSize: '1rem',
-                            cursor: 'pointer'
-                        }}
+                        className="error-btn"
                     >
                         Recargar
                     </button>

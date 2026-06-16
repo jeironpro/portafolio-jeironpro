@@ -63,30 +63,13 @@ export default function Navbar() {
 
     return (
         <>
-            {/* Barra de progreso de scroll */}
-            <div
-                style={{
-                    position: 'fixed',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    zIndex: 101,
-                    height: '2px',
-                    background: 'var(--color-glass-border)'
-                }}
-            >
+            <div className="progress-bar-track">
                 <div
-                    style={{
-                        height: '100%',
-                        width: `${scrollProgress * 100}%`,
-                        background: 'var(--color-accent-gradient)',
-                        transition: 'width 0.1s linear',
-                        borderRadius: '0 1px 1px 0'
-                    }}
+                    className="progress-bar-fill"
+                    style={{ width: `${scrollProgress * 100}%` }}
                 />
             </div>
 
-            {/* Navegacion flotante tipo pill */}
             <nav
                 className="nav-pill"
                 style={{
@@ -112,37 +95,8 @@ export default function Navbar() {
                     <button
                         key={s.id}
                         onClick={() => scrollTo(s.id)}
-                        className="nav-pill-btn"
-                        style={{
-                            padding: '0.4rem 0.9rem',
-                            border: 'none',
-                            borderRadius: 'var(--radius-full)',
-                            background: activeSection === s.id
-                                ? 'rgba(var(--naranja-principal-rgb), 0.12)'
-                                : 'transparent',
-                            color: activeSection === s.id
-                                ? 'var(--color-text-primary)'
-                                : 'var(--color-text-muted)',
-                            fontFamily: 'var(--font-body)',
-                            fontSize: '0.8rem',
-                            fontWeight: activeSection === s.id ? 600 : 450,
-                            cursor: 'pointer',
-                            letterSpacing: '0.01em',
-                            transition: 'all 0.25s ease',
-                            whiteSpace: 'nowrap'
-                        }}
-                        onMouseEnter={(e) => {
-                            if (activeSection !== s.id) {
-                                e.currentTarget.style.color = 'var(--color-text-primary)';
-                                e.currentTarget.style.background = 'var(--color-glass-bg)';
-                            }
-                        }}
-                        onMouseLeave={(e) => {
-                            if (activeSection !== s.id) {
-                                e.currentTarget.style.color = 'var(--color-text-muted)';
-                                e.currentTarget.style.background = 'transparent';
-                            }
-                        }}
+                        className={`nav-pill-btn${activeSection === s.id ? ' active' : ''}`}
+                        aria-current={activeSection === s.id ? 'true' : undefined}
                     >
                         {t(s.labelKey)}
                     </button>

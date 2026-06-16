@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { useStore } from '../../hooks/useStore';
 import { projects } from '../../data/portfolio';
 import { useTranslation } from 'react-i18next';
@@ -7,6 +8,41 @@ export default function ProjectModal() {
     const selectedProject = useStore((s) => s.selectedProject);
     const isModalOpen = useStore((s) => s.isModalOpen);
     const closeModal = useStore((s) => s.closeModal);
+    const closeRef = useRef(null);
+    const overlayRef = useRef(null);
+
+    useEffect(() => {
+        if (!isModalOpen) return;
+        const prev = document.activeElement;
+        closeRef.current?.focus();
+
+        const handleKey = (e) => {
+            if (e.key === 'Escape') closeModal();
+            if (e.key === 'Tab') {
+                const modal = overlayRef.current?.firstElementChild;
+                if (!modal) return;
+                const focusable = modal.querySelectorAll(
+                    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+                );
+                if (!focusable.length) return;
+                const first = focusable[0];
+                const last = focusable[focusable.length - 1];
+                if (e.shiftKey && document.activeElement === first) {
+                    e.preventDefault();
+                    last.focus();
+                } else if (!e.shiftKey && document.activeElement === last) {
+                    e.preventDefault();
+                    first.focus();
+                }
+            }
+        };
+
+        document.addEventListener('keydown', handleKey);
+        return () => {
+            document.removeEventListener('keydown', handleKey);
+            prev?.focus();
+        };
+    }, [isModalOpen, closeModal]);
 
     if (!isModalOpen || !selectedProject) return null;
 
@@ -15,124 +51,58 @@ export default function ProjectModal() {
 
     return (
         <div
+            ref={overlayRef}
             onClick={closeModal}
-            style={{
-                position: 'fixed',
-                inset: 0,
-                zIndex: 200,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                background: 'rgba(var(--color-bg-rgb), 0.8)',
-                backdropFilter: 'blur(8px)',
-                cursor: 'pointer'
-            }}
+            role="dialog"
+            aria-modal="true"
+            aria-label={t(project.titleKey)}
+            className="modal-overlay"
         >
             <div
                 onClick={(e) => e.stopPropagation()}
-                style={{
-                    maxWidth: '520px',
-                    width: '90%',
-                    padding: '2.5rem',
-                    background: 'var(--color-bg-elevated)',
-                    borderRadius: '16px',
-                    border: '1px solid var(--color-border)',
-                    cursor: 'default'
-                }}
+                className="modal-content"
             >
-                <div
-                    style={{
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        alignItems: 'flex-start',
-                        marginBottom: '1.5rem'
-                    }}
-                >
-                    <h2
-                        style={{
-                            fontFamily: 'var(--font-heading)',
-                            fontSize: '1.5rem',
-                            color: 'var(--color-text-primary)'
-                        }}
-                    >
+                <div className="modal-header">
+                    <h2 className="modal-title">
                         {t(project.titleKey)}
                     </h2>
                     <button
+                        ref={closeRef}
                         onClick={closeModal}
-                        style={{
-                            background: 'none',
-                            border: 'none',
-                            color: 'var(--color-text-secondary)',
-                            fontSize: '1.5rem',
-                            cursor: 'pointer',
-                            padding: '0.25rem',
-                            lineHeight: 1
-                        }}
+                        aria-label="Cerrar"
+                        className="modal-close"
                     >
                         &times;
                     </button>
                 </div>
 
-                <p
-                    style={{
-                        color: 'var(--color-text-primary)',
-                        fontSize: '0.95rem',
-                        lineHeight: 1.7,
-                        marginBottom: '1.5rem'
-                    }}
-                >
+                {project.image && (
+                    <div className="modal-img-wrap">
+                        <img
+                            src={project.image}
+                            alt={t(project.titleKey)}
+                            className="modal-img"
+                        />
+                    </div>
+                )}
+
+                <p className="modal-desc">
                     {t(project.longDescriptionKey)}
                 </p>
 
-                <div
-                    style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        gap: '0.5rem',
-                        marginBottom: '1.5rem'
-                    }}
-                >
+                <div className="modal-tags">
                     {project.tags.map((tag) => (
-                        <span
-                            key={tag}
-                            style={{
-                                padding: '4px 12px',
-                                background: 'rgba(var(--azul-principal-rgb), 0.12)',
-                                color: 'var(--color-primary)',
-                                borderRadius: '100px',
-                                fontSize: '0.8rem',
-                                fontWeight: 500
-                            }}
-                        >
-                            {tag}
-                        </span>
+                        <span key={tag} className="tag">{tag}</span>
                     ))}
                 </div>
 
-                <div style={{ display: 'flex', gap: '1rem' }}>
+                <div className="modal-actions">
                     {project.url && (
                         <a
                             href={project.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            style={{
-                                padding: '10px 24px',
-                                borderRadius: '8px',
-                                background: 'var(--color-primary)',
-                                color: 'var(--color-text-primary)',
-                                fontFamily: 'var(--font-heading)',
-                                fontWeight: 600,
-                                fontSize: '0.85rem',
-                                transition: 'all 0.3s ease'
-                            }}
-                            onMouseEnter={(e) => {
-                                e.target.style.background = 'var(--azul-claro)';
-                                e.target.style.transform = 'translateY(-1px)';
-                            }}
-                            onMouseLeave={(e) => {
-                                e.target.style.background = 'var(--color-primary)';
-                                e.target.style.transform = 'translateY(0)';
-                            }}
+                            className="action-btn action-btn-primary"
                         >
                             {t('projects.viewSite')}
                         </a>
@@ -142,22 +112,7 @@ export default function ProjectModal() {
                             href={project.github}
                             target="_blank"
                             rel="noopener noreferrer"
-                            style={{
-                                padding: '10px 24px',
-                                borderRadius: '8px',
-                                background: 'var(--color-glass-bg)',
-                                color: 'var(--color-text-primary)',
-                                fontFamily: 'var(--font-heading)',
-                                fontWeight: 600,
-                                fontSize: '0.85rem',
-                                transition: 'all 0.3s ease'
-                            }}
-                            onMouseEnter={(e) => {
-                                e.target.style.background = 'var(--color-glass-bg-hover)';
-                            }}
-                            onMouseLeave={(e) => {
-                                e.target.style.background = 'var(--color-glass-bg)';
-                            }}
+                            className="action-btn action-btn-glass"
                         >
                             {t('projects.viewCode')}
                         </a>

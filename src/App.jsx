@@ -1,6 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import ErrorBoundary from './components/common/ErrorBoundary';
-import BackgroundCanvas from './components/scene/BackgroundCanvas';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import HeroSection from './components/sections/HeroSection';
@@ -11,10 +10,14 @@ import ContactSection from './components/sections/ContactSection';
 import ProjectModal from './components/ui/ProjectModal';
 import StyleGuidePage from './pages/StyleGuidePage';
 
+const BackgroundCanvas = lazy(() => import('./components/scene/BackgroundCanvas'));
+
 function Portfolio() {
     return (
         <>
-            <BackgroundCanvas />
+            <Suspense fallback={null}>
+                <BackgroundCanvas />
+            </Suspense>
             <Navbar />
             <main style={{ position: 'relative', zIndex: 1 }}>
                 <HeroSection />

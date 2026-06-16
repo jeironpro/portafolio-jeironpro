@@ -8,7 +8,8 @@ function ParticleField() {
     const scrollY = useRef(0);
     const currentOpacity = useRef(0.45);
 
-    const COUNT = 150;
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+    const COUNT = isMobile ? 50 : 150;
 
     const positions = useMemo(() => {
         const pos = new Float32Array(COUNT * 3);
